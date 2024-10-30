@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_onalti/screens/home_screen.dart';
+import 'package:youtube_onalti/screens/home_screen_annotated.dart';
 
 void main() {
   runApp(const Uygulamam());
