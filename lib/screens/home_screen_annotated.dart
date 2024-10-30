@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF191919),
+      backgroundColor: const Color(0xFF191919),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
