@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,21 +32,25 @@ class HomeScreen extends StatelessWidget {
             Positioned(
               right: 76,
               bottom: 114,
-              child: GestureDetector(
-                onTap: () => print('Reset'),
-                child: Container(
-                  width: 30,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    //color: Colors.red[200],
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                ),
-              ),
+              child: _resetButton(),
             ),
           ]),
         ],
       )),
+    );
+  }
+
+  GestureDetector _resetButton() {
+    return GestureDetector(
+      onTap: () => print('Reset'),
+      child: Container(
+        width: 30,
+        height: 30,
+        decoration: BoxDecoration(
+          //color: Colors.red[200],
+          borderRadius: BorderRadius.circular(60),
+        ),
+      ),
     );
   }
 
